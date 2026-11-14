@@ -1,0 +1,13 @@
+mcp:
+  devtools_browsers:
+    - aside
+vendors:
+  - claude
+  - codex
+  - copilot
+  - cursor
+  - grok
+  - antigravity
+  - hermes
+  - qwen
+  - zcode

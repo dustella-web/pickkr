@@ -1,0 +1,649 @@
+{
+  "snapshot_id": "2026-W46",
+  "channel": "lottedfs",
+  "status": "PUBLISHED",
+  "collected_at": "2026-11-14T03:18:08.946Z",
+  "published_at": "2026-11-14T03:18:27.552Z",
+  "items": [
+    {
+      "rank": 1,
+      "rank_delta": null,
+      "source_product_id": "20000959645",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000959645&prdOptNo=20001278569",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/69/85/27/01/00/02/20001278569_2.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 2,
+      "sale_price": 1.11,
+      "brand": {
+        "ko": "프레티",
+        "en": "PRRETI",
+        "ja": "プレティ",
+        "zh-CN": "PRRETI 普莱蒂",
+        "zh-TW": "PRRETI 普萊蒂"
+      },
+      "name": {
+        "ko": "[2개 이상 47%] 프레티 입술 허니앤베리 립 슬리핑 마스크 15g",
+        "en": "[47% Off 2+] PRRETI Honey & Berry Lip Sleeping Mask 15g",
+        "ja": "[2点以上47%OFF] プレティ ハニー＆ベリー リップスリーピングマスク 15g",
+        "zh-CN": "[2件以上47折] PRRETI 蜂蜜浆果睡眠唇膜 15g",
+        "zh-TW": "[2件以上47折] PRRETI 蜂蜜莓果晚安唇膜 15g"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 2,
+      "rank_delta": null,
+      "source_product_id": "20000946008",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000946008&prdOptNo=20001256135",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/35/61/25/01/00/02/20001256135_3.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 37,
+      "sale_price": 29.6,
+      "brand": {
+        "ko": "에스트라",
+        "en": "AESTURA",
+        "ja": "エストラ",
+        "zh-CN": "AESTURA 瑷丝特兰",
+        "zh-TW": "AESTURA 靄絲特蘭"
+      },
+      "name": {
+        "ko": "아토베리어365 크림 듀오 기획세트",
+        "en": "AESTURA Atobarrier365 Cream Duo Set",
+        "ja": "エストラ アトバリア365 クリーム デュオ企画セット",
+        "zh-CN": "AESTURA 每日保湿修护霜双支装礼盒",
+        "zh-TW": "AESTURA 每日保濕修護霜雙入組"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 3,
+      "rank_delta": null,
+      "source_product_id": "20000959649",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000959649&prdOptNo=20001278573",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/73/85/27/01/00/02/20001278573_2.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 2,
+      "sale_price": 1.11,
+      "brand": {
+        "ko": "프레티",
+        "en": "PRRETI",
+        "ja": "プレティ",
+        "zh-CN": "PRRETI 普莱蒂",
+        "zh-TW": "PRRETI 普萊蒂"
+      },
+      "name": {
+        "ko": "[2개 이상 47%] 프레티 바이옴 콜라겐 아이크림 30ml",
+        "en": "[47% Off 2+] PRRETI Biome Collagen Eye Cream 30ml",
+        "ja": "[2点以上47%OFF] プレティ バイオーム コラーゲン アイクリーム 30ml",
+        "zh-CN": "[2件以上47折] PRRETI 益生菌胶原蛋白眼霜 30ml",
+        "zh-TW": "[2件以上47折] PRRETI 益生菌膠原蛋白眼霜 30ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 4,
+      "rank_delta": null,
+      "source_product_id": "20000394541",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000394541&prdOptNo=20000409926",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/26/99/40/00/00/02/20000409926_5.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 26,
+      "sale_price": 12.74,
+      "brand": {
+        "ko": "듀이셀",
+        "en": "DEWYCEL",
+        "ja": "デュイセル",
+        "zh-CN": "DEWYCEL 蒂唯希",
+        "zh-TW": "DEWYCEL 蒂唯希"
+      },
+      "name": {
+        "ko": "[2개 이상 51%]듀이셀 프라이빗케어 마스크팩 1+1",
+        "en": "[51% Off 2+] DEWYCEL Private Care Mask Pack 1+1",
+        "ja": "[2点以上51%OFF] デュイセル プライベートケア マスクパック 1+1",
+        "zh-CN": "[2件以上51折] DEWYCEL 奢华修护面膜 1+1",
+        "zh-TW": "[2件以上51折] DEWYCEL 奢華修護面膜 1+1"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 5,
+      "rank_delta": null,
+      "source_product_id": "20000795441",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000795441&prdOptNo=20001445044",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/44/50/44/01/00/02/20001445044_1.webp/dims/resize/400x400",
+      "currency": "USD",
+      "price": 13,
+      "sale_price": 6.86,
+      "brand": {
+        "ko": "김정문알로에",
+        "en": "KJM Aloe",
+        "ja": "キム・ジョンムン・アロエ",
+        "zh-CN": "金正门芦荟",
+        "zh-TW": "金正門蘆薈"
+      },
+      "name": {
+        "ko": "[3개 51% 할인] 피토 그린 세럼 마스크 10매",
+        "en": "[51% Off 3] KJM Aloe Phyto Green Serum Mask (10 Sheets)",
+        "ja": "[3点51%OFF] キム・ジョンムン・アロエ フィトグリーン セラムマスク 10枚入",
+        "zh-CN": "[3件51折] 金正门芦荟植萃精华面膜 10片装",
+        "zh-TW": "[3件51折] 金正門蘆薈植萃精華面膜 10片裝"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 6,
+      "rank_delta": null,
+      "source_product_id": "20000729163",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000729163&prdOptNo=20000903400",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/00/34/90/00/00/02/20000903400_2.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 376,
+      "sale_price": null,
+      "brand": {
+        "ko": "에스티로더",
+        "en": "Estée Lauder",
+        "ja": "エスティ ローダー",
+        "zh-CN": "雅诗兰黛",
+        "zh-TW": "雅詩蘭黛"
+      },
+      "name": {
+        "ko": "Advanced Night Repair 어드밴스드 나이트 리페어 싱크로나이즈드 멀티-리커버리 콤플렉스 듀오 100ml x 2",
+        "en": "Estée Lauder Advanced Night Repair Synchronized Multi-Recovery Complex Duo 100ml x 2",
+        "ja": "エスティ ローダー アドバンス ナイト リペア SMR コンプレックス デュオ 100ml×2",
+        "zh-CN": "雅诗兰黛 第七代小棕瓶特润修护肌透精华露双瓶装 100ml x 2",
+        "zh-TW": "雅詩蘭黛 特潤超導全方位修護露雙入組 100ml x 2"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 7,
+      "rank_delta": null,
+      "source_product_id": "20000938136",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000938136&prdOptNo=20001241717",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/17/17/24/01/00/02/20001241717_2.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 1,
+      "sale_price": 0.55,
+      "brand": {
+        "ko": "프레티",
+        "en": "PRRETI",
+        "ja": "プレティ",
+        "zh-CN": "PRRETI 普莱蒂",
+        "zh-TW": "PRRETI 普萊蒂"
+      },
+      "name": {
+        "ko": "프레티 퍼펙트 클린 데일리 클렌징 티슈(30매)",
+        "en": "PRRETI Perfect Clean Daily Cleansing Tissue (30 Sheets)",
+        "ja": "プレティ パーフェクトクリーン デイリー クレンジングティッシュ（30枚）",
+        "zh-CN": "PRRETI 净澈每日卸妆湿巾 (30片)",
+        "zh-TW": "PRRETI 淨澈每日卸妝濕巾 (30片)"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 8,
+      "rank_delta": null,
+      "source_product_id": "20000810648",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000810648&prdOptNo=20001028991",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/91/89/02/01/00/02/20001028991_4.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 29,
+      "sale_price": null,
+      "brand": {
+        "ko": "알엠케이",
+        "en": "RMK",
+        "ja": "RMK",
+        "zh-CN": "RMK",
+        "zh-TW": "RMK"
+      },
+      "name": {
+        "ko": "RMK W TREATMENT OIL",
+        "en": "RMK W Treatment Oil",
+        "ja": "RMK Wトリートメントオイル",
+        "zh-CN": "RMK 双效修护菁萃油",
+        "zh-TW": "RMK W修護菁萃油"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 9,
+      "rank_delta": null,
+      "source_product_id": "20001057697",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20001057697&prdOptNo=20001462767",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/67/27/46/01/00/02/20001462767_1.webp/dims/resize/400x400",
+      "currency": "USD",
+      "price": 33,
+      "sale_price": 19.79,
+      "brand": {
+        "ko": "아로셀",
+        "en": "AROCELL",
+        "ja": "アロセル",
+        "zh-CN": "AROCELL",
+        "zh-TW": "AROCELL"
+      },
+      "name": {
+        "ko": "[2개 이상 45%]슈퍼 콜라겐 마스크 2.0 ECM ACTIVE 8매입",
+        "en": "[45% Off 2+] AROCELL Super Collagen Mask 2.0 ECM Active (8 Sheets)",
+        "ja": "[2点以上45%OFF] アロセル スーパーコラーゲンマスク 2.0 ECM ACTIVE 8枚入",
+        "zh-CN": "[2件以上45折] AROCELL 超级胶原蛋白面膜 2.0 ECM 8片装",
+        "zh-TW": "[2件以上45折] AROCELL 超級膠原蛋白面膜 2.0 ECM 8片裝"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 10,
+      "rank_delta": null,
+      "source_product_id": "20001029080",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20001029080&prdOptNo=20001406766",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/66/67/40/01/00/02/20001406766_4.webp/dims/resize/400x400",
+      "currency": "USD",
+      "price": 9,
+      "sale_price": 4.82,
+      "brand": {
+        "ko": "바닐라코",
+        "en": "BANILA CO",
+        "ja": "バニラコ",
+        "zh-CN": "芭妮兰 BANILA CO",
+        "zh-TW": "BANILA CO 芭妮蘭"
+      },
+      "name": {
+        "ko": "클린잇제로 오리지널 클렌징밤 트래블 키트-3ML*16",
+        "en": "BANILA CO Clean It Zero Original Cleansing Balm Travel Kit (3ml x 16)",
+        "ja": "バニラコ クリーンイットゼロ オリジナル クレンジングバーム トラベルキット 3ml×16",
+        "zh-CN": "芭妮兰 致柔卸妆膏经典版旅行装 3ml×16",
+        "zh-TW": "BANILA CO Zero零感肌瞬卸凝霜旅行組 3ml×16"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 11,
+      "rank_delta": null,
+      "source_product_id": "20001007172",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20001007172&prdOptNo=20001367893",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/93/78/36/01/00/02/20001367893_5.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 4,
+      "sale_price": 2.23,
+      "brand": {
+        "ko": "프레티",
+        "en": "PRRETI",
+        "ja": "プレティ",
+        "zh-CN": "PRRETI 普莱蒂",
+        "zh-TW": "PRRETI 普萊蒂"
+      },
+      "name": {
+        "ko": "[2개 이상 47%] 프레티 EGF+ 리페어 인텐시브 아이크림 20ml",
+        "en": "[47% Off 2+] PRRETI EGF+ Repair Intensive Eye Cream 20ml",
+        "ja": "[2点以上47%OFF] プレティ EGF+ リペア インテンシブ アイクリーム 20ml",
+        "zh-CN": "[2件以上47折] PRRETI EGF+ 密集修护眼霜 20ml",
+        "zh-TW": "[2件以上47折] PRRETI EGF+ 密集修護眼霜 20ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 12,
+      "rank_delta": null,
+      "source_product_id": "20000993542",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000993542&prdOptNo=20001342085",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/85/20/34/01/00/02/20001342085_5.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 11,
+      "sale_price": 5.39,
+      "brand": {
+        "ko": "아리얼",
+        "en": "Ariul",
+        "ja": "アリウル",
+        "zh-CN": "Ariul 艾丽尔",
+        "zh-TW": "Ariul 艾麗爾"
+      },
+      "name": {
+        "ko": "아리얼 엑스퍼트 펩타이드 콜라겐 겔 마스크 4매입",
+        "en": "Ariul Expert Peptide Collagen Gel Mask (4 Sheets)",
+        "ja": "アリウル エキスパート ペプチド コラーゲン ゲルマスク 4枚入",
+        "zh-CN": "Ariul 胜肽胶原蛋白凝胶面膜 4片装",
+        "zh-TW": "Ariul 胜肽膠原蛋白水凝膠面膜 4片裝"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 13,
+      "rank_delta": null,
+      "source_product_id": "20000503174",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000503174&prdOptNo=20000569886",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/86/98/56/00/00/02/20000569886_8.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 27,
+      "sale_price": null,
+      "brand": {
+        "ko": "라로슈포제",
+        "en": "La Roche-Posay",
+        "ja": "ラ ロッシュ ポゼ",
+        "zh-CN": "理肤泉",
+        "zh-TW": "理膚寶水"
+      },
+      "name": {
+        "ko": "시카플라스트 밤 B5 100ml",
+        "en": "La Roche-Posay Cicaplast Baume B5 100ml",
+        "ja": "ラ ロッシュ ポゼ シカプラスト バーム B5 100ml",
+        "zh-CN": "理肤泉 B5 多效修复霜 100ml",
+        "zh-TW": "理膚寶水 B5+ 全面修復霜 100ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 14,
+      "rank_delta": null,
+      "source_product_id": "20000938137",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000938137&prdOptNo=20001241718",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/18/17/24/01/00/02/20001241718_2.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 2,
+      "sale_price": 1.11,
+      "brand": {
+        "ko": "프레티",
+        "en": "PRRETI",
+        "ja": "プレティ",
+        "zh-CN": "PRRETI 普莱蒂",
+        "zh-TW": "PRRETI 普萊蒂"
+      },
+      "name": {
+        "ko": "[2개 이상 47%] 프레티 V라인 솔루션 패치 1매입",
+        "en": "[47% Off 2+] PRRETI V-Line Solution Patch (1 Sheet)",
+        "ja": "[2点以上47%OFF] プレティ Vライン ソリューション パッチ 1枚入",
+        "zh-CN": "[2件以上47折] PRRETI V脸提拉紧致贴 1片装",
+        "zh-TW": "[2件以上47折] PRRETI V臉緊緻拉提貼 1片裝"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 15,
+      "rank_delta": null,
+      "source_product_id": "20001028218",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20001028218&prdOptNo=20001404966",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/66/49/40/01/00/02/20001404966_3.webp/dims/resize/400x400",
+      "currency": "USD",
+      "price": 94,
+      "sale_price": 56.93,
+      "brand": {
+        "ko": "설화수",
+        "en": "Sulwhasoo",
+        "ja": "ソルファス",
+        "zh-CN": "雪花秀",
+        "zh-TW": "雪花秀"
+      },
+      "name": {
+        "ko": "에센셜 데일리 세트 (2종)",
+        "en": "Sulwhasoo Essential Daily Set (2 Items)",
+        "ja": "ソルファス エッセンシャル デイリーセット（2種）",
+        "zh-CN": "雪花秀 滋盈肌本水乳两件套",
+        "zh-TW": "雪花秀 滋陰光萃水乳組（2件）"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 16,
+      "rank_delta": null,
+      "source_product_id": "20000917094",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000917094&prdOptNo=20001209208",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/08/92/20/01/00/02/20001209208_2.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 23,
+      "sale_price": 11.96,
+      "brand": {
+        "ko": "웰라쥬",
+        "en": "WELLAGE",
+        "ja": "ウェラージュ",
+        "zh-CN": "WELLAGE 唯拉珠",
+        "zh-TW": "WELLAGE 唯拉珠"
+      },
+      "name": {
+        "ko": "웰라쥬 리얼 히알루로닉 블루 앰플리필 기획 세트",
+        "en": "WELLAGE Real Hyaluronic Blue Ampoule Refill Special Set",
+        "ja": "ウェラージュ リアルヒアルロニック ブルーアンプル リフィル企画セット",
+        "zh-CN": "WELLAGE 唯拉珠玻尿酸蓝色安瓶替换装礼盒",
+        "zh-TW": "WELLAGE 唯拉珠玻尿酸藍色安瓶補充組"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 17,
+      "rank_delta": null,
+      "source_product_id": "20000841552",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000841552&prdOptNo=20001085242",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/42/52/08/01/00/02/20001085242_3.webp/dims/resize/400x400",
+      "currency": "USD",
+      "price": 25,
+      "sale_price": 12.42,
+      "brand": {
+        "ko": "바이오더마",
+        "en": "BIODERMA",
+        "ja": "ビオデルマ",
+        "zh-CN": "贝德玛",
+        "zh-TW": "貝膚黛瑪"
+      },
+      "name": {
+        "ko": "시카비오 포마드 100ml",
+        "en": "BIODERMA Cicabio Pommade 100ml",
+        "ja": "ビオデルマ シカビオ ポマード 100ml",
+        "zh-CN": "贝德玛 赋妍修护霜 100ml",
+        "zh-TW": "貝膚黛瑪 舒敏修護滋養霜 100ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 18,
+      "rank_delta": null,
+      "source_product_id": "20000503177",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20000503177&prdOptNo=20000569889",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/89/98/56/00/00/02/20000569889_6.jpg/dims/resize/400x400",
+      "currency": "USD",
+      "price": 50,
+      "sale_price": null,
+      "brand": {
+        "ko": "라로슈포제",
+        "en": "La Roche-Posay",
+        "ja": "ラ ロッシュ ポゼ",
+        "zh-CN": "理肤泉",
+        "zh-TW": "理膚寶水"
+      },
+      "name": {
+        "ko": "시카플라스트 밤 B5 100ml 듀오",
+        "en": "La Roche-Posay Cicaplast Baume B5 100ml Duo",
+        "ja": "ラ ロッシュ ポゼ シカプラスト バーム B5 100ml デュオ",
+        "zh-CN": "理肤泉 B5 多效修复霜 100ml 双支装",
+        "zh-TW": "理膚寶水 B5+ 全面修復霜 100ml 雙入組"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 19,
+      "rank_delta": null,
+      "source_product_id": "10001386386",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=10001386386&prdOptNo=10001386386",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/86/63/38/01/00/01/10001386386_1.webp/dims/resize/400x400",
+      "currency": "USD",
+      "price": 60,
+      "sale_price": null,
+      "brand": {
+        "ko": "키엘",
+        "en": "Kiehl's",
+        "ja": "キールズ",
+        "zh-CN": "科颜氏",
+        "zh-TW": "契爾氏"
+      },
+      "name": {
+        "ko": "키엘 울트라 훼이셜 크림",
+        "en": "Kiehl's Ultra Facial Cream",
+        "ja": "キールズ クリーム UFC（ウルトラフェイシャルクリーム）",
+        "zh-CN": "科颜氏 高保湿面霜",
+        "zh-TW": "契爾氏 冰河醣蛋白保濕霜"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 20,
+      "rank_delta": null,
+      "source_product_id": "20001028277",
+      "product_url": "https://kor.lottedfs.com/kr/product/productDetail?prdNo=20001028277&prdOptNo=20001405091",
+      "image_url": "https://static.lottedfs.com/prod/prd-img/91/50/40/01/00/02/20001405091_1.webp/dims/resize/400x400",
+      "currency": "USD",
+      "price": 158,
+      "sale_price": 103.55,
+      "brand": {
+        "ko": "설화수",
+        "en": "Sulwhasoo",
+        "ja": "ソルファス",
+        "zh-CN": "雪花秀",
+        "zh-TW": "雪花秀"
+      },
+      "name": {
+        "ko": "윤조에센스 6세대 90ML 듀오",
+        "en": "Sulwhasoo First Care Activating Serum VI 90ml Duo",
+        "ja": "ソルファス 潤燥（ユンジョ）エッセンス 第6世代 90ml デュオ",
+        "zh-CN": "雪花秀 润致焕活肌底精华露 第6代 90ml 双瓶装",
+        "zh-TW": "雪花秀 潤燥養膚精華 第6代 90ml 雙入組"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,649 @@
+{
+  "snapshot_id": "2026-W46",
+  "channel": "daisomall",
+  "status": "PUBLISHED",
+  "collected_at": "2026-11-14T03:09:08.003Z",
+  "published_at": "2026-11-14T03:18:27.558Z",
+  "items": [
+    {
+      "rank": 1,
+      "rank_delta": null,
+      "source_product_id": "1067917",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1067917",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20260413/nTHCo12xWGPWzU1UirBJ1067917_00_00nTHCo12xWGPWzU1UirBJ.jpg",
+      "currency": "KRW",
+      "price": 1000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "[각질케어]물방울 모양 클렌징 스펀지",
+        "en": "[Exfoliating] Teardrop Cleansing Sponge",
+        "ja": "[角質ケア] しずく型クレンジングスポンジ",
+        "zh-CN": "[角质护理] 水滴形洁面海绵扑",
+        "zh-TW": "[角質護理] 水滴型洗臉海綿撲"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 2,
+      "rank_delta": null,
+      "source_product_id": "1069059",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069059",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20260211/aSQKVlt8FBtLM0cRVHoh1069059_00_00aSQKVlt8FBtLM0cRVHoh.jpg",
+      "currency": "KRW",
+      "price": 1000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "[딥클렌징]발바닥 모양 클렌징 스펀지",
+        "en": "[Deep Cleansing] Paw-Shaped Cleansing Sponge",
+        "ja": "[ディープクレンジング] 肉球型クレンジングスポンジ",
+        "zh-CN": "[深层清洁] 爪印造型洁面海绵",
+        "zh-TW": "[深層清潔] 貓掌造型洗臉海綿"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 3,
+      "rank_delta": null,
+      "source_product_id": "1057694",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1057694",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20260901/mEPYUm2IAh0oE0SRFt2G1057694_00_00mEPYUm2IAh0oE0SRFt2G.jpg",
+      "currency": "KRW",
+      "price": 2000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "실리콘 세안 브러시＆리필",
+        "en": "Silicone Facial Cleansing Brush & Refill",
+        "ja": "シリコン洗顔ブラシ＆リフィル",
+        "zh-CN": "硅胶洗脸刷及替换头套装",
+        "zh-TW": "矽膠洗臉刷含替換頭組"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 4,
+      "rank_delta": null,
+      "source_product_id": "1067851",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1067851",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20260122/86nK4KG9yzF3NNHFTFjz1067851_00_0086nK4KG9yzF3NNHFTFjz.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "채비공간",
+        "en": "Chaebigonggan",
+        "ja": "チェビゴンガン",
+        "zh-CN": "Chaebigonggan",
+        "zh-TW": "Chaebigonggan"
+      },
+      "name": {
+        "ko": "채비공간 고운쌀겨 팩클렌저 45 g",
+        "en": "Chaebigonggan Fine Rice Bran Pack Cleanser 45g",
+        "ja": "チェビゴンガン 米ぬかパッククレンザー 45g",
+        "zh-CN": "Chaebigonggan 细腻米糠面膜洁面乳 45g",
+        "zh-TW": "Chaebigonggan 細緻米糠面膜潔顏乳 45g"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 5,
+      "rank_delta": null,
+      "source_product_id": "1069054",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069054",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20260121/9EVx41OltonhpSXC3Hbw1069054_00_009EVx41OltonhpSXC3Hbw.jpg",
+      "currency": "KRW",
+      "price": 1000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "실리콘 듀얼 팩 모공 브러시",
+        "en": "Silicone Dual Pack & Pore Cleansing Brush",
+        "ja": "シリコン デュアルパック＆毛穴ブラシ",
+        "zh-CN": "双头硅胶敷膜及毛孔清洁刷",
+        "zh-TW": "雙頭矽膠敷膜毛孔清潔刷"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 6,
+      "rank_delta": null,
+      "source_product_id": "1073319",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1073319",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20251226/YB90zNKfWGa6ryZehgfr1073319_00_01YB90zNKfWGa6ryZehgfr.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "포인트",
+        "en": "POINT",
+        "ja": "ポイント",
+        "zh-CN": "POINT",
+        "zh-TW": "POINT"
+      },
+      "name": {
+        "ko": "포인트 라이스 딥 멜팅 클렌징밤 60 g",
+        "en": "POINT Rice Deep Melting Cleansing Balm 60g",
+        "ja": "POINT ライス ディープメルティング クレンジングバーム 60g",
+        "zh-CN": "POINT 大米深层融化卸妆膏 60g",
+        "zh-TW": "POINT 米萃深層融妝潔顏霜 60g"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 7,
+      "rank_delta": null,
+      "source_product_id": "1073320",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1073320",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20251226/4cRHm8tFTUMQ3y278MUr1073320_00_014cRHm8tFTUMQ3y278MUr.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "포인트",
+        "en": "POINT",
+        "ja": "ポイント",
+        "zh-CN": "POINT",
+        "zh-TW": "POINT"
+      },
+      "name": {
+        "ko": "포인트 라이스 반죽광채 팩클렌저 100 g",
+        "en": "POINT Rice Glow Dough Pack Cleanser 100g",
+        "ja": "POINT ライス もちツヤ パッククレンザー 100g",
+        "zh-CN": "POINT 大米光彩面团敷面洁面乳 100g",
+        "zh-TW": "POINT 米萃光澤麻糬面膜潔顏乳 100g"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 8,
+      "rank_delta": null,
+      "source_product_id": "90204",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=90204",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20231208/2B9UWNcMrU4KpGIWxjaO90204_00_002B9UWNcMrU4KpGIWxjaO.jpg",
+      "currency": "KRW",
+      "price": 1000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "사각형 세안 퍼프",
+        "en": "Square Facial Cleansing Puff",
+        "ja": "スクエア洗顔パフ",
+        "zh-CN": "方形洁面海绵扑",
+        "zh-TW": "方形洗臉海綿撲"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 9,
+      "rank_delta": null,
+      "source_product_id": "1061881",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1061881",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20250213/AKeu7Mv094m9XRgNAbIg1061881_00_01AKeu7Mv094m9XRgNAbIg.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "더페이스샵",
+        "en": "THE FACE SHOP",
+        "ja": "ザフェイスショップ",
+        "zh-CN": "菲诗小铺",
+        "zh-TW": "THE FACE SHOP 菲詩小舖"
+      },
+      "name": {
+        "ko": "더페이스샵 맑은 쌀 클렌징 튜브 밤 60 ml",
+        "en": "THE FACE SHOP Rice Water Bright Cleansing Tube Balm 60ml",
+        "ja": "ザフェイスショップ ライスウォーター ブライト クレンジングチューブバーム 60ml",
+        "zh-CN": "菲诗小铺 莹润大米管装卸妆膏 60ml",
+        "zh-TW": "THE FACE SHOP 菲詩小舖 淨透米水軟管卸妝膏 60ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 10,
+      "rank_delta": null,
+      "source_product_id": "1061914",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1061914",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20250220/cMxEKalGQNPrNH3an9qg1061914_00_01cMxEKalGQNPrNH3an9qg.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "랩잇",
+        "en": "LAB.it by Dr.G",
+        "ja": "LAB.it by Dr.G",
+        "zh-CN": "LAB.it by Dr.G",
+        "zh-TW": "LAB.it by Dr.G"
+      },
+      "name": {
+        "ko": "랩잇 by 닥터지 포어 찰떡클렌저 50 ml",
+        "en": "LAB.it by Dr.G Pore Mochi Cleanser 50ml",
+        "ja": "LAB.it by Dr.G ポア もちクレンザー 50ml",
+        "zh-CN": "LAB.it by Dr.G 毛孔麻糬洁面乳 50ml",
+        "zh-TW": "LAB.it by Dr.G 毛孔麻糬潔顏乳 50ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 11,
+      "rank_delta": null,
+      "source_product_id": "1063555",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1063555",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20260421/vVHBOBPFrUIE4PoRPgdW1063555_00_00vVHBOBPFrUIE4PoRPgdW.jpg",
+      "currency": "KRW",
+      "price": 1000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "실리콘 부착 세안 브러시",
+        "en": "Suction Silicone Facial Cleansing Brush",
+        "ja": "吸盤付きシリコン洗顔ブラシ",
+        "zh-CN": "带吸盘硅胶洁面刷",
+        "zh-TW": "吸盤式矽膠洗臉刷"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 12,
+      "rank_delta": null,
+      "source_product_id": "1070122",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1070122",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20250926/d8Bh58WKecFkFIGzHZ3v1070122_00_01d8Bh58WKecFkFIGzHZ3v.jpg",
+      "currency": "KRW",
+      "price": 3000,
+      "sale_price": null,
+      "brand": {
+        "ko": "미모 바이 마몽드",
+        "en": "MIMO by Mamonde",
+        "ja": "MIMO by Mamonde",
+        "zh-CN": "MIMO by 梦妆",
+        "zh-TW": "MIMO by 夢妝"
+      },
+      "name": {
+        "ko": "미모 바이 마몽드 민트-AHA 팩클렌저 4 g*6개입 (아모레퍼시픽)",
+        "en": "MIMO by Mamonde Mint-AHA Pack Cleanser 4g x 6pcs",
+        "ja": "MIMO by Mamonde ミント-AHA パッククレンザー 4g×6個入",
+        "zh-CN": "MIMO by 梦妆 薄荷果酸敷面洁面乳 4g×6袋",
+        "zh-TW": "MIMO by 夢妝 薄荷果酸面膜潔顏乳 4g×6包"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 13,
+      "rank_delta": null,
+      "source_product_id": "61627",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=61627",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20231130/116f0dQCw9oBB8M2vkVH61627_00_00116f0dQCw9oBB8M2vkVH.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "모공 세안 브러시",
+        "en": "Pore Cleansing Facial Brush",
+        "ja": "毛穴クレンジング洗顔ブラシ",
+        "zh-CN": "深层清洁毛孔洗脸刷",
+        "zh-TW": "深層清潔毛孔洗臉刷"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 14,
+      "rank_delta": null,
+      "source_product_id": "1073318",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1073318",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20251226/KDudQlfJlWkYPQQGhZjF1073318_00_01KDudQlfJlWkYPQQGhZjF.jpg",
+      "currency": "KRW",
+      "price": 3000,
+      "sale_price": null,
+      "brand": {
+        "ko": "포인트",
+        "en": "POINT",
+        "ja": "ポイント",
+        "zh-CN": "POINT",
+        "zh-TW": "POINT"
+      },
+      "name": {
+        "ko": "포인트 라이스 찰떡 흡착 클렌징 폼 80 g",
+        "en": "POINT Rice Sticky Adsorption Cleansing Foam 80g",
+        "ja": "POINT ライス もちもち吸着クレンジングフォーム 80g",
+        "zh-CN": "POINT 大米强力吸附洁面泡沫 80g",
+        "zh-TW": "POINT 米萃彈力吸附洗面乳 80g"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 15,
+      "rank_delta": null,
+      "source_product_id": "61055",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=61055",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20231201/PozuWCXTlmfLU9rVKX4x61055_00_00PozuWCXTlmfLU9rVKX4x.jpg",
+      "currency": "KRW",
+      "price": 2000,
+      "sale_price": null,
+      "brand": {
+        "ko": "다이소",
+        "en": "DAISO Korea",
+        "ja": "ダイソー韓国",
+        "zh-CN": "韩国大创 DAISO",
+        "zh-TW": "韓國大創 DAISO"
+      },
+      "name": {
+        "ko": "블랙헤드제거용 실리콘 브러시",
+        "en": "Silicone Blackhead Remover Brush",
+        "ja": "小鼻用ブラックヘッド除去シリコンブラシ",
+        "zh-CN": "去黑头硅胶洁面刷",
+        "zh-TW": "去黑頭矽膠洗臉刷"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 16,
+      "rank_delta": null,
+      "source_product_id": "1064411",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1064411",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20251231/IvQn4xlt7PutqKSTCgkB1064411_00_00IvQn4xlt7PutqKSTCgkB.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "잇츠스킨",
+        "en": "It'S SKIN",
+        "ja": "イッツスキン",
+        "zh-CN": "伊思 It'S SKIN",
+        "zh-TW": "It'S SKIN 伊思"
+      },
+      "name": {
+        "ko": "잇츠스킨 세븐 펩타이드 콜라겐 크림 50 ml",
+        "en": "It'S SKIN Seven Peptide Collagen Cream 50ml",
+        "ja": "イッツスキン セブンペプチド コラーゲンクリーム 50ml",
+        "zh-CN": "伊思 It'S SKIN 七重胜肽胶原蛋白面霜 50ml",
+        "zh-TW": "It'S SKIN 伊思 七重胜肽膠原蛋白面霜 50ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 17,
+      "rank_delta": null,
+      "source_product_id": "1064412",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1064412",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20251231/IuFPxmGFY3V4iTT5f1oJ1064412_00_00IuFPxmGFY3V4iTT5f1oJ.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "잇츠스킨",
+        "en": "It'S SKIN",
+        "ja": "イッツスキン",
+        "zh-CN": "伊思 It'S SKIN",
+        "zh-TW": "It'S SKIN 伊思"
+      },
+      "name": {
+        "ko": "잇츠스킨 세븐펩타이드콜라겐 크림스틱 9 g",
+        "en": "It'S SKIN Seven Peptide Collagen Cream Stick 9g",
+        "ja": "イッツスキン セブンペプチド コラーゲンクリームスティック 9g",
+        "zh-CN": "伊思 It'S SKIN 七重胜肽胶原蛋白保湿棒 9g",
+        "zh-TW": "It'S SKIN 伊思 七重胜肽膠原蛋白保濕棒 9g"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 18,
+      "rank_delta": null,
+      "source_product_id": "1064414",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1064414",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20251231/Cn9gPXoUWEum51QIGm4V1064414_00_00Cn9gPXoUWEum51QIGm4V.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "잇츠스킨",
+        "en": "It'S SKIN",
+        "ja": "イッツスキン",
+        "zh-CN": "伊思 It'S SKIN",
+        "zh-TW": "It'S SKIN 伊思"
+      },
+      "name": {
+        "ko": "잇츠스킨 세븐 펩타이드 콜라겐 앰플 50 ml",
+        "en": "It'S SKIN Seven Peptide Collagen Ampoule 50ml",
+        "ja": "イッツスキン セブンペプチド コラーゲンアンプル 50ml",
+        "zh-CN": "伊思 It'S SKIN 七重胜肽胶原蛋白安瓶 50ml",
+        "zh-TW": "It'S SKIN 伊思 七重胜肽膠原蛋白安瓶 50ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 19,
+      "rank_delta": null,
+      "source_product_id": "1067495",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1067495",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20260908/3J2IVmbWFVgnei1tyfv71067495_00_003J2IVmbWFVgnei1tyfv7.jpg",
+      "currency": "KRW",
+      "price": 5000,
+      "sale_price": null,
+      "brand": {
+        "ko": "VT",
+        "en": "VT Cosmetics",
+        "ja": "VTコスメティックス",
+        "zh-CN": "VT 薇缔",
+        "zh-TW": "VT 薇締"
+      },
+      "name": {
+        "ko": "[퀵 수분충전]VT PDRN 광채 토너 200 ml",
+        "en": "[Quick Hydration] VT PDRN Glow Toner 200ml",
+        "ja": "[クイック水分チャージ] VT PDRN グロウトナー 200ml",
+        "zh-CN": "[快速补水] VT PDRN 光彩爽肤水 200ml",
+        "zh-TW": "[快速補水] VT PDRN 光澤化妝水 200ml"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    },
+    {
+      "rank": 20,
+      "rank_delta": null,
+      "source_product_id": "1067496",
+      "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1067496",
+      "image_url": "https://cdn.daisomall.co.kr/file/PD/20251226/cceyzI3mcdWkrllblcO41067496_00_01cceyzI3mcdWkrllblcO4.jpg",
+      "currency": "KRW",
+      "price": 3000,
+      "sale_price": null,
+      "brand": {
+        "ko": "VT",
+        "en": "VT Cosmetics",
+        "ja": "VTコスメティックス",
+        "zh-CN": "VT 薇缔",
+        "zh-TW": "VT 薇締"
+      },
+      "name": {
+        "ko": "[탄력광채]VT PDRN 광채 에센스 2 ml 6개입",
+        "en": "[Firming Glow] VT PDRN Glow Essence 2ml x 6pcs",
+        "ja": "[ハリツヤ] VT PDRN グロウエッセンス 2ml×6個入",
+        "zh-CN": "[弹润亮采] VT PDRN 光彩精华 2ml×6支",
+        "zh-TW": "[彈潤光澤] VT PDRN 光澤精華 2ml×6入"
+      },
+      "category": "beauty",
+      "editorial_summary": {
+        "ko": "",
+        "en": "",
+        "ja": "",
+        "zh-CN": "",
+        "zh-TW": ""
+      }
+    }
+  ]
+}
