@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { Analytics } from '@vercel/analytics/next';
 import { PUBLIC_LOCALES, isPublicLocale } from '@/lib/i18n/messages';
 import { buildAdSenseMetaOther, getAdSenseClientId } from '@/lib/seo/adsense';
 
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
           />
         )}
         {children}
+        <Analytics />
       </body>
     </html>
   );

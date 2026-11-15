@@ -12,6 +12,7 @@ import { LanguageSwitcher } from '@/components/language-switcher';
 import { BrandLogo } from '@/components/brand-logo';
 import { LEGAL_LABELS, LEGAL_SLUGS } from '@/lib/content/legal-pages';
 import { getProductEditorialNote } from '@/lib/content/product-editorial';
+import { buildProductImageAlt } from '@/lib/seo/metadata';
 
 const CHANNEL_ORDER: ChannelId[] = ['lottedfs', 'missha', 'daisomall'];
 
@@ -212,7 +213,8 @@ export function RankingGrid({
               {item.image_url && (
                 <img
                   src={item.image_url}
-                  alt={displayName}
+                  alt={buildProductImageAlt(displayBrand, displayName)}
+                  loading="lazy"
                   referrerPolicy="no-referrer"
                   className="absolute inset-0 h-full w-full object-cover"
                 />

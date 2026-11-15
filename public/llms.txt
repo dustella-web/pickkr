@@ -1,0 +1,23 @@
+# PickKR
+
+> Korea Travel Beauty Guide & Weekly Top 20 Best Sellers from Lotte Duty Free, MISSHA, and DAISO Korea.
+
+PickKR tracks weekly best-selling Korean beauty and skincare products across major traveler shopping channels and publishes practical shopping, tax-refund, and airport carry-on guides in four languages (`en`, `ja`, `zh-CN`, `zh-TW`).
+
+## Supported Locales
+- English: `/en`
+- Japanese: `/ja`
+- Simplified Chinese: `/zh-CN`
+- Traditional Chinese: `/zh-TW`
+
+## Weekly Top 20 Rankings
+- Lotte Duty Free Best Sellers: `/en/channel/lottedfs`, `/ja/channel/lottedfs`, `/zh-CN/channel/lottedfs`, `/zh-TW/channel/lottedfs`
+- MISSHA Korea Best Sellers: `/en/channel/missha`, `/ja/channel/missha`, `/zh-CN/channel/missha`, `/zh-TW/channel/missha`
+- DAISO Korea Beauty Best Sellers: `/en/channel/daisomall`, `/ja/channel/daisomall`, `/zh-CN/channel/daisomall`, `/zh-TW/channel/daisomall`
+
+## Travel Shopping Guides
+- Guides Index: `/en/guides`, `/ja/guides`, `/zh-CN/guides`, `/zh-TW/guides`
+
+## Sitemaps & Policies
+- XML Sitemap: `/sitemap.xml`
+- Robots: `/robots.txt`

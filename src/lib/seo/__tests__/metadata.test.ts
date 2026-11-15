@@ -5,6 +5,7 @@ import {
   buildBreadcrumbJsonLd,
   buildLocaleAlternates,
   buildPageMetadata,
+  buildProductImageAlt,
   DEFAULT_OG_IMAGE,
   getSiteBaseUrl,
   toOpenGraphLocale,
@@ -12,6 +13,8 @@ import {
 import { buildAdSenseMetaOther, buildAdsTxtContent } from '@/lib/seo/adsense';
 import { metadata as adminMetadata } from '@/app/admin/layout';
 import { metadata as rootLayoutMetadata } from '@/app/layout';
+import LocaleLayout from '@/app/[locale]/layout';
+import { Analytics } from '@vercel/analytics/next';
 import { metadata as rootPageMetadata } from '@/app/page';
 import { generateMetadata as generateHomeMetadata } from '@/app/[locale]/page';
 import nextConfig from '../../../../next.config';
@@ -202,5 +205,47 @@ describe('seo metadata helpers', () => {
     const filePath = join(process.cwd(), 'public', 'googlea554b8885522e5b6.html');
     const content = readFileSync(filePath, 'utf8');
     expect(content).toBe('google-site-verification: googlea554b8885522e5b6.html');
+  });
+
+  it('should render Vercel Analytics inside locale layout body', async () => {
+    const tree = (await LocaleLayout({
+      children: 'test-child',
+      params: Promise.resolve({ locale: 'en' }),
+    })) as { props: { children: { props: { children: unknown[] } } } };
+    const bodyChildren = tree.props.children.props.children;
+    const hasAnalytics = bodyChildren.some(
+      (child) =>
+        typeof child === 'object' &&
+        child !== null &&
+        'type' in child &&
+        (child as { type: unknown }).type === Analytics
+    );
+    expect(hasAnalytics).toBe(true);
+  });
+
+  it('should build product image alt text including brand without duplication', () => {
+    expect(buildProductImageAlt('AESTURA', 'Atobarrier365 Cream')).toBe(
+      'AESTURA Atobarrier365 Cream'
+    );
+    expect(buildProductImageAlt('MISSHA', 'MISSHA M Perfect Cover BB Cream RX')).toBe(
+      'MISSHA M Perfect Cover BB Cream RX'
+    );
+    expect(buildProductImageAlt('', 'Lip Sleeping Mask')).toBe('Lip Sleeping Mask');
+  });
+
+  it('should include image URLs in sitemap entries for channels and guides', async () => {
+    const entries = await sitemap();
+    const channelEntry = entries.find((e) => e.url.endsWith('/en/channel/lottedfs'));
+    const guideEntry = entries.find((e) => e.url.includes('/en/guides/'));
+    expect(channelEntry?.images?.length).toBeGreaterThan(0);
+    expect(guideEntry?.images?.length).toBe(1);
+  });
+
+  it('should provide public/llms.txt for AI search crawlers (GEO)', () => {
+    const llmsPath = join(process.cwd(), 'public', 'llms.txt');
+    const content = readFileSync(llmsPath, 'utf8');
+    expect(content).toContain('PickKR');
+    expect(content).toContain('/en/channel/lottedfs');
+    expect(content).toContain('/en/guides');
   });
 });

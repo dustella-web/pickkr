@@ -74,6 +74,7 @@ export default async function ChannelTop20Page({
       position: item.rank,
       name: item.name[locale]?.trim() || item.name.ko,
       url: `${baseUrl}/${locale}/channel/${ch}#rank-${item.rank}`,
+      ...(item.image_url ? { image: item.image_url } : {}),
     })),
   };
 

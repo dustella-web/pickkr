@@ -101,6 +101,16 @@ export function buildPageMetadata({
 /**
  * Builds a schema.org BreadcrumbList JSON-LD payload with 1-based positions and absolute URLs.
  */
+export function buildProductImageAlt(brand: string, name: string): string {
+  const cleanBrand = brand.trim();
+  const cleanName = name.trim();
+  if (!cleanBrand) return cleanName;
+  if (cleanName.toLowerCase().includes(cleanBrand.toLowerCase())) {
+    return cleanName;
+  }
+  return `${cleanBrand} ${cleanName}`;
+}
+
 export function buildBreadcrumbJsonLd(items: Array<{ name: string; path: string }>) {
   const baseUrl = getSiteBaseUrl();
   return {

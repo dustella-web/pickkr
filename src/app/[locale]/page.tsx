@@ -14,7 +14,7 @@ import {
   getChannelEditorial,
   getHomeEditorial,
 } from '@/lib/content/channel-editorial';
-import { buildPageMetadata, getSiteBaseUrl } from '@/lib/seo/metadata';
+import { buildPageMetadata, buildProductImageAlt, getSiteBaseUrl } from '@/lib/seo/metadata';
 import { BrandLogo } from '@/components/brand-logo';
 import { PublicShell, RankingGrid } from '@/components/ranking-view';
 
@@ -112,6 +112,7 @@ export default async function LocaleHomePage({
                   {snapshots.map(({ channel, snapshot }) => {
                     const topItem = snapshot?.items?.[0];
                     if (!topItem) return null;
+                    const itemBrand = topItem.brand[locale]?.trim() || topItem.brand.ko;
                     const itemName = topItem.name[locale]?.trim() || topItem.name.ko;
                     return (
                       <Link
@@ -123,7 +124,7 @@ export default async function LocaleHomePage({
                           {topItem.image_url && (
                             <img
                               src={topItem.image_url}
-                              alt={itemName}
+                              alt={buildProductImageAlt(itemBrand, itemName)}
                               referrerPolicy="no-referrer"
                               className="absolute inset-0 h-full w-full object-cover"
                             />
