@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, it, expect } from 'vitest';
 import {
   buildBreadcrumbJsonLd,
@@ -9,6 +11,7 @@ import {
 } from '../metadata';
 import { buildAdSenseMetaOther, buildAdsTxtContent } from '@/lib/seo/adsense';
 import { metadata as adminMetadata } from '@/app/admin/layout';
+import { metadata as rootLayoutMetadata } from '@/app/layout';
 import { metadata as rootPageMetadata } from '@/app/page';
 import { generateMetadata as generateHomeMetadata } from '@/app/[locale]/page';
 import nextConfig from '../../../../next.config';
@@ -185,5 +188,19 @@ describe('seo metadata helpers', () => {
       permanent: false,
     });
     expect(rootPageMetadata?.alternates?.canonical).toBe(`${getSiteBaseUrl()}/en`);
+  });
+
+  it('should include naver-site-verification meta tag in root layout metadata', () => {
+    expect(rootLayoutMetadata.verification).toEqual({
+      other: {
+        'naver-site-verification': '19d4de2d66d200a2d4acd246a441afc7506d7ef1',
+      },
+    });
+  });
+
+  it('should serve the Google Search Console verification HTML file from public/', () => {
+    const filePath = join(process.cwd(), 'public', 'googlea554b8885522e5b6.html');
+    const content = readFileSync(filePath, 'utf8');
+    expect(content).toBe('google-site-verification: googlea554b8885522e5b6.html');
   });
 });

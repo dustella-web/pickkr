@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'PickKR',
   description:
     'Korea Travel Beauty Guide & Weekly Top 20 Best Sellers from Lotte Duty Free, MISSHA, and DAISO Korea.',
+  verification: {
+    other: {
+      'naver-site-verification': '19d4de2d66d200a2d4acd246a441afc7506d7ef1',
+    },
+  },
   ...(adsenseOther ? { other: adsenseOther } : {}),
 };
 
