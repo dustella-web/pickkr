@@ -94,4 +94,37 @@ describe('product editorial notes', () => {
       expect(compactNote).not.toBe(fullNote);
     }
   });
+
+  it('incorporates product-specific size and active ingredient context into fallback notes', () => {
+    const collagenCream: RankingItem = {
+      ...baseItem,
+      rank: 2,
+      name: {
+        ko: '콜라겐 탄력 크림 50ml',
+        en: 'Collagen Firming Cream 50ml',
+        ja: 'コラーゲン 弾力クリーム 50ml',
+        'zh-CN': '胶原蛋白紧致面霜 50ml',
+        'zh-TW': '膠原蛋白緊緻乳霜 50ml',
+      },
+    };
+    const cicaCream: RankingItem = {
+      ...baseItem,
+      rank: 2,
+      name: {
+        ko: '시카 진정 크림 100ml',
+        en: 'Cica Soothing Cream 100ml',
+        ja: 'シカ 鎮静クリーム 100ml',
+        'zh-CN': '积雪草舒缓面霜 100ml',
+        'zh-TW': '積雪草舒緩乳霜 100ml',
+      },
+    };
+
+    for (const locale of PUBLIC_LOCALES) {
+      const collagenNote = getProductEditorialNote(collagenCream, locale, 'full');
+      const cicaNote = getProductEditorialNote(cicaCream, locale, 'full');
+      expect(collagenNote).not.toBe(cicaNote);
+      expect(collagenNote).toContain('50ml');
+      expect(cicaNote).toContain('100ml');
+    }
+  });
 });

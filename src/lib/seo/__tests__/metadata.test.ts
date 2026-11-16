@@ -183,13 +183,9 @@ describe('seo metadata helpers', () => {
     });
   });
 
-  it('should configure root redirect and canonical metadata on root page', async () => {
-    const redirects = await nextConfig.redirects?.();
-    expect(redirects).toContainEqual({
-      source: '/',
-      destination: '/en',
-      permanent: false,
-    });
+  it('should serve root page directly without 307 redirect and keep canonical metadata', async () => {
+    const redirects = (await nextConfig.redirects?.()) ?? [];
+    expect(redirects.some((r) => r.source === '/')).toBe(false);
     expect(rootPageMetadata?.alternates?.canonical).toBe(`${getSiteBaseUrl()}/en`);
   });
 

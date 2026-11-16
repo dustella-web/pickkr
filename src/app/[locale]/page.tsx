@@ -4,7 +4,18 @@ import { notFound } from 'next/navigation';
 import type { ChannelId } from '@/types/ranking';
 import { readChannelSnapshot } from '@/lib/storage/json-store';
 import { PUBLIC_LOCALES, getUiMessages, isPublicLocale } from '@/lib/i18n/messages';
-import { formatProductPrice } from '@/lib/i18n/format-price';
+import { getProductPriceDisplay } from '@/lib/i18n/format-price';
+import { getExchangeRates } from '@/lib/i18n/exchange-rates';
+import {
+  buildCrossChannelPool,
+  extractTopDeals,
+} from '@/lib/content/cross-channel-insights';
+import {
+  buildFaqJsonLd,
+  getChannelComparisonData,
+  getFaqSectionHeading,
+  getTravelerFaqItems,
+} from '@/lib/content/channel-comparison';
 import {
   GUIDE_ARTICLES,
   getGuideCoverImage,
@@ -16,9 +27,13 @@ import {
 } from '@/lib/content/channel-editorial';
 import { buildPageMetadata, buildProductImageAlt, getSiteBaseUrl } from '@/lib/seo/metadata';
 import { BrandLogo } from '@/components/brand-logo';
+import { ProductImage } from '@/components/product-image';
 import { PublicShell, RankingGrid } from '@/components/ranking-view';
+import { CrossChannelFinder } from '@/components/cross-channel-finder';
 
 const CHANNELS: ChannelId[] = ['lottedfs', 'missha', 'daisomall'];
+
+export const revalidate = 43200; // 12 hours (2 updates per day)
 
 export function generateStaticParams() {
   return PUBLIC_LOCALES.map((locale) => ({ locale }));
@@ -52,12 +67,26 @@ export default async function LocaleHomePage({
 
   const t = getUiMessages(locale);
   const homeEditorial = getHomeEditorial(locale);
-  const snapshots = await Promise.all(
-    CHANNELS.map(async (ch) => ({
-      channel: ch,
-      snapshot: await readChannelSnapshot('published', ch),
-    }))
-  );
+  const [exchangeSnapshot, snapshots] = await Promise.all([
+    getExchangeRates(),
+    Promise.all(
+      CHANNELS.map(async (ch) => ({
+        channel: ch,
+        snapshot: await readChannelSnapshot('published', ch),
+      }))
+    ),
+  ]);
+  const exchangeRates = exchangeSnapshot.rates;
+  const channelInputs = snapshots.map(({ channel, snapshot }) => ({
+    channel,
+    items: snapshot?.items.slice(0, 20) ?? [],
+  }));
+  const crossChannelPool = buildCrossChannelPool(channelInputs);
+  const topDeals = extractTopDeals(channelInputs, 4);
+  const comparison = getChannelComparisonData(locale);
+  const faqItems = getTravelerFaqItems(locale);
+  const faqHeading = getFaqSectionHeading(locale);
+  const faqJsonLd = buildFaqJsonLd(locale);
 
   const websiteJsonLd = {
     '@context': 'https://schema.org',
@@ -121,14 +150,12 @@ export default async function LocaleHomePage({
                         className="flex items-center gap-3.5 py-3 transition-colors first:pt-1 last:pb-1 hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0a1317]"
                       >
                         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-[12px] bg-[#f1f4f7]">
-                          {topItem.image_url && (
-                            <img
-                              src={topItem.image_url}
-                              alt={buildProductImageAlt(itemBrand, itemName)}
-                              referrerPolicy="no-referrer"
-                              className="absolute inset-0 h-full w-full object-cover"
-                            />
-                          )}
+                          <ProductImage
+                            src={topItem.image_url}
+                            alt={buildProductImageAlt(itemBrand, itemName)}
+                            fallbackLabel={itemBrand}
+                            loading="eager"
+                          />
                         </div>
                         <div className="min-w-0 flex-1">
                           <span className="block truncate text-xs font-bold text-[#5d6c7b]">
@@ -138,9 +165,23 @@ export default async function LocaleHomePage({
                             {itemName}
                           </span>
                         </div>
-                        <span className="shrink-0 text-sm font-bold tabular-nums text-[#0a1317]">
-                          {formatProductPrice(topItem, locale)}
-                        </span>
+                        <div className="shrink-0 text-right">
+                          {(() => {
+                            const priceInfo = getProductPriceDisplay(topItem, locale, exchangeRates);
+                            return (
+                              <>
+                                {priceInfo.regularPrice && (
+                                  <span className="block text-[11px] font-medium tabular-nums text-[#8595a4] line-through">
+                                    {priceInfo.regularPrice}
+                                  </span>
+                                )}
+                                <span className="block text-sm font-bold tabular-nums text-[#0a1317]">
+                                  {priceInfo.displayPrice}
+                                </span>
+                              </>
+                            );
+                          })()}
+                        </div>
                       </Link>
                     );
                   })}
@@ -149,6 +190,13 @@ export default async function LocaleHomePage({
             </div>
           </div>
         </section>
+
+        <CrossChannelFinder
+          pool={crossChannelPool}
+          topDeals={topDeals}
+          locale={locale}
+          exchangeRates={exchangeRates}
+        />
 
         {snapshots.map(({ channel, snapshot }) => (
           <section key={channel}>
@@ -175,7 +223,13 @@ export default async function LocaleHomePage({
             </div>
 
             {snapshot && snapshot.items.length > 0 ? (
-              <RankingGrid items={snapshot.items.slice(0, 8)} locale={locale} variant="compact" />
+              <RankingGrid
+                items={snapshot.items.slice(0, 8)}
+                locale={locale}
+                variant="compact"
+                exchangeRates={exchangeRates}
+                exchangeUpdatedAt={exchangeSnapshot.updatedAt}
+              />
             ) : (
               <div className="rounded-[24px] border border-dashed border-[#ced0d4] bg-white p-10 text-center text-sm text-[#8595a4]">
                 {t.emptyChannel}
@@ -245,6 +299,66 @@ export default async function LocaleHomePage({
               <p key={idx}>{paragraph}</p>
             ))}
           </div>
+        </section>
+
+        {/* 3-Channel Comparison Matrix */}
+        <section className="rounded-[32px] border border-[#dee3e9] bg-white p-6 md:p-10">
+          <h2 className="text-xl font-bold tracking-tight text-[#0a1317] md:text-2xl">
+            {comparison.heading}
+          </h2>
+          <p className="mt-1.5 text-sm leading-6 text-[#4b4c4f]">{comparison.subtitle}</p>
+          <div className="mt-6 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b border-[#dee3e9] text-xs font-bold uppercase tracking-wide text-[#5d6c7b]">
+                  <th className="py-3 pr-4">{comparison.columns.channel}</th>
+                  <th className="py-3 pr-4">{comparison.columns.priceTier}</th>
+                  <th className="py-3 pr-4">{comparison.columns.taxBenefit}</th>
+                  <th className="py-3 pr-4">{comparison.columns.bestFor}</th>
+                  <th className="py-3">{comparison.columns.pickupTip}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#eef1f5]">
+                {comparison.rows.map((row) => (
+                  <tr key={row.channel} className="align-top">
+                    <td className="py-4 pr-4 font-bold text-[#0a1317]">
+                      <Link
+                        href={`/${locale}/channel/${row.channel}`}
+                        className="text-[#0064e0] hover:underline"
+                      >
+                        {t.channels[row.channel]}
+                      </Link>
+                    </td>
+                    <td className="py-4 pr-4 whitespace-nowrap font-medium tabular-nums text-[#0a1317]">
+                      {row.priceTier}
+                    </td>
+                    <td className="py-4 pr-4 text-[#4b4c4f]">{row.taxBenefit}</td>
+                    <td className="py-4 pr-4 text-[#4b4c4f]">{row.bestFor}</td>
+                    <td className="py-4 text-[#4b4c4f]">{row.pickupTip}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Traveler FAQ + FAQPage JSON-LD */}
+        <section className="rounded-[32px] border border-[#dee3e9] bg-white p-6 md:p-10">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+          <h2 className="text-xl font-bold tracking-tight text-[#0a1317] md:text-2xl">
+            {faqHeading}
+          </h2>
+          <dl className="mt-6 divide-y divide-[#eef1f5]">
+            {faqItems.map((faq) => (
+              <div key={faq.question} className="py-4 first:pt-0 last:pb-0">
+                <dt className="text-sm font-bold text-[#0a1317] md:text-base">{faq.question}</dt>
+                <dd className="mt-1.5 text-sm leading-6 text-[#4b4c4f]">{faq.answer}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
       </div>
     </PublicShell>

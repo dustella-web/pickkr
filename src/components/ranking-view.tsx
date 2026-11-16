@@ -7,9 +7,11 @@ import {
   getUiMessages,
   type PublicLocale,
 } from '@/lib/i18n/messages';
-import { formatProductPrice } from '@/lib/i18n/format-price';
+import { getProductPriceDisplay } from '@/lib/i18n/format-price';
+import type { ExchangeRateMap } from '@/lib/i18n/exchange-rates';
 import { LanguageSwitcher } from '@/components/language-switcher';
 import { BrandLogo } from '@/components/brand-logo';
+import { ProductImage } from '@/components/product-image';
 import { LEGAL_LABELS, LEGAL_SLUGS } from '@/lib/content/legal-pages';
 import { getProductEditorialNote } from '@/lib/content/product-editorial';
 import { buildProductImageAlt } from '@/lib/seo/metadata';
@@ -188,20 +190,29 @@ export function RankingGrid({
   items,
   locale,
   variant = 'full',
+  exchangeRates,
+  exchangeUpdatedAt,
 }: {
   items: RankingItem[];
   locale: PublicLocale;
   variant?: 'full' | 'compact';
+  exchangeRates?: ExchangeRateMap;
+  exchangeUpdatedAt?: string;
 }) {
   const t = getUiMessages(locale);
+  const formattedUpdatedAt = exchangeUpdatedAt
+    ? `${exchangeUpdatedAt.slice(0, 16).replace('T', ' ')} UTC`
+    : null;
 
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {items.map((item) => {
-        const displayBrand = item.brand[locale]?.trim() || item.brand.ko;
-        const displayName = item.name[locale]?.trim() || item.name.ko;
-        const displayPrice = formatProductPrice(item, locale);
-        const editorialNote = getProductEditorialNote(item, locale, variant);
+    <div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {items.map((item) => {
+          const displayBrand = item.brand[locale]?.trim() || item.brand.ko;
+          const displayName = item.name[locale]?.trim() || item.name.ko;
+          const { displayPrice, regularPrice, discountPct, originalPrice } =
+            getProductPriceDisplay(item, locale, exchangeRates);
+          const editorialNote = getProductEditorialNote(item, locale, variant);
 
         return (
           <article
@@ -210,18 +221,32 @@ export function RankingGrid({
             className="flex flex-col rounded-[24px] border border-[#dee3e9] bg-white p-4 transition-colors hover:border-[#ced0d4]"
           >
             <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-[16px] bg-[#f1f4f7]">
-              {item.image_url && (
-                <img
-                  src={item.image_url}
-                  alt={buildProductImageAlt(displayBrand, displayName)}
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              )}
+              <ProductImage
+                src={item.image_url}
+                alt={buildProductImageAlt(displayBrand, displayName)}
+                fallbackLabel={displayBrand}
+              />
               <span className="absolute left-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-[#0a1317] text-xs font-bold tabular-nums text-white">
                 {item.rank}
               </span>
+              <div className="absolute right-3 top-3 flex items-center gap-1.5">
+                {typeof item.rank_delta === 'number' && item.rank_delta !== 0 && (
+                  <span
+                    className={`rounded-full px-2 py-0.5 text-[11px] font-bold tabular-nums ${
+                      item.rank_delta > 0
+                        ? 'bg-[#e6f4ea] text-[#137333]'
+                        : 'bg-[#fce8e6] text-[#c5221f]'
+                    }`}
+                  >
+                    {item.rank_delta > 0 ? `▲${item.rank_delta}` : `▼${Math.abs(item.rank_delta)}`}
+                  </span>
+                )}
+                {discountPct !== null && discountPct > 0 && (
+                  <span className="rounded-full bg-[#0064e0] px-2 py-0.5 text-[11px] font-bold tabular-nums text-white">
+                    -{discountPct}%
+                  </span>
+                )}
+              </div>
             </div>
 
             <div className="flex flex-1 flex-col pt-4">
@@ -236,9 +261,28 @@ export function RankingGrid({
               </p>
 
               <div className="mt-auto flex items-center justify-between gap-2 border-t border-[#dee3e9] pt-3.5">
-                <span className="whitespace-nowrap text-base font-bold tabular-nums text-[#0a1317]">
-                  {displayPrice}
-                </span>
+                <div className="min-w-0">
+                  {regularPrice && (
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-medium tabular-nums text-[#8595a4] line-through">
+                        {regularPrice}
+                      </span>
+                      {discountPct !== null && (
+                        <span className="text-xs font-bold tabular-nums text-[#e11d48]">
+                          -{discountPct}%
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  <span className="block whitespace-nowrap text-base font-bold tabular-nums text-[#0a1317]">
+                    {displayPrice}
+                  </span>
+                  {originalPrice && (
+                    <span className="block truncate text-[11px] font-medium tabular-nums text-[#5d6c7b]">
+                      ({originalPrice})
+                    </span>
+                  )}
+                </div>
                 <a
                   href={item.product_url}
                   target="_blank"
@@ -252,6 +296,13 @@ export function RankingGrid({
           </article>
         );
       })}
+      </div>
+      {exchangeRates && (
+        <p className="mt-4 text-xs text-[#5d6c7b]">
+          {t.exchangeRateNotice}
+          {formattedUpdatedAt ? ` (${formattedUpdatedAt})` : ''}
+        </p>
+      )}
     </div>
   );
 }

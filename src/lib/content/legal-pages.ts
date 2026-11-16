@@ -213,7 +213,7 @@ const CONTENT: Record<LegalSlug, Record<PublicLocale, RawLegalPageContent>> = {
       title: 'External Links & Disclaimer',
       paragraphs: [
         'PickKR is an independent editorial curation guide—not an e-commerce retailer—and does not process customer orders, payments, customs filings, or international shipping.',
-        'Product cards and shopping guides include outbound links directing visitors to official third-party storefronts such as Lotte Duty Free, MISSHA, and DAISO Korea. Once you leave PickKR, all browsing, checkout terms, return windows, and privacy rules are governed solely by the destination website.',
+        'Product cards and shopping guides include outbound links directing visitors to official third-party storefronts such as Lotte Duty Free, MISSHA, and DAISO Korea. Localized prices shown in USD, JPY, CNY, or TWD are reference estimates converted from KRW/USD exchange rates updated twice daily and may differ from final checkout totals. Once you leave PickKR, all browsing, checkout terms, return windows, and privacy rules are governed solely by the destination website.',
         'Skincare ingredient summaries, skin-type notes, airport liquid limits, and tax-refund thresholds published on PickKR are compiled for general informational planning only and do not constitute dermatological, medical, customs, or legal advice. Always check official packaging labels and current airport rules before flying.',
         'Some outbound links or site placements may participate in affiliate or advertising programs in the future; however, editorial guide selection and weekly ranking positions are never sold or altered in exchange for compensation.',
       ],
@@ -222,7 +222,7 @@ const CONTENT: Record<LegalSlug, Record<PublicLocale, RawLegalPageContent>> = {
       title: '外部リンクおよび免責事項',
       paragraphs: [
         'PickKR は独立した情報キュレーションメディアであり、通信販売サイトではありません。当サイト上で商品の販売、決済、通関手続き、発送業務は一切行いません。',
-        '商品カードのボタンやガイド内のリンクは、ロッテ免税店・MISSHA・ダイソー韓国などの外部公式ストアへ遷移します。外部サイトへ移動した後の購入手続き、価格変更、在庫切れ、返品条件、個人情報の取り扱いについて当サイトは一切の責任を負いません。',
+        '商品カードのボタンやガイド内のリンクは、ロッテ免税店・MISSHA・ダイソー韓国などの外部公式ストアへ遷移します。表示されている各国通貨（USD・JPY・CNY・TWD）は1日2回更新される参考換算価格であり、実際の決済金額と異なる場合があります。外部サイトへ移動した後の購入手続き、価格変更、在庫切れ、返品条件、個人情報の取り扱いについて当サイトは一切の責任を負いません。',
         '当サイトに掲載しているスキンケア成分の解説、機内持ち込み液体ルール、免税還付の条件等は一般的な旅行計画の参考情報であり、医療・皮膚科的助言や法務・税関上の公的保証を行うものではありません。渡航前に必ず航空会社および公式パッケージをご確認ください。',
         '今後、当サイトの一部のリンクや広告枠にアフィリエイトまたは Google AdSense 等の広告配信が含まれる場合がありますが、週間ランキング順位や編集ガイドの評価が広告収益によって左右されることはありません。',
       ],
@@ -231,7 +231,7 @@ const CONTENT: Record<LegalSlug, Record<PublicLocale, RawLegalPageContent>> = {
       title: '外部链接与免责声明',
       paragraphs: [
         'PickKR 是一家独立的韩妆与赴韩购物资讯指南网站，并非电子商务零售平台，不直接参与任何商品销售、在线付款、报关或跨境物流配送。',
-        '站内商品卡片中的“前往官方商城”按钮及指南外链均跳转至乐天免税店、谜尚、大创等第三方官方网站。离开 PickKR 后，相关订单交易安全、实时定价变动、退换货规则及售后服务均由目标网站自行负责。',
+        '站内商品卡片中的“前往官方商城”按钮及指南外链均跳转至乐天免税店、谜尚、大创等第三方官方网站。页面显示的各国货币价格为基于每日更新2次的汇率换算的参考估算值，实际结账金额可能因刷卡汇率与门店活动而异。离开 PickKR 后，相关订单交易安全、实时定价变动、退换货规则及售后服务均由目标网站自行负责。',
         '本网站介绍的护肤成分特性、肤质适配提示、机场液体随身携带标准及退税金额门槛仅供出行前一般信息参考，不构成医疗、皮肤科诊疗或海关法律意见；实际购买与登机前请务必核对产品包装说明与航空公司最新公告。',
         '本站部分出站链接或广告位未来可能包含合规推广或 Google AdSense 广告展示，但每周榜单排序与编辑评测立场绝不接受任何付费置换或商业干预。',
       ],
@@ -240,7 +240,7 @@ const CONTENT: Record<LegalSlug, Record<PublicLocale, RawLegalPageContent>> = {
       title: '外部連結與免責聲明',
       paragraphs: [
         'PickKR 為獨立運作的韓國購物與美妝資訊指南平台，並非電子商務零售網站，不提供任何商品販售、線上金流結帳、報關或物流配送服務。',
-        '站內商品卡片與專欄文章中的外連按鈕皆導向樂天免稅店、MISSHA、大創等第三方官方通路。當您離開 PickKR 前往外部網站後，一切交易條件、價格異動、退換貨政策與售後服務均由該官方網站全權負責。',
+        '站內商品卡片與專欄文章中的外連按鈕皆導向樂天免稅店、MISSHA、大創等第三方官方通路。頁面顯示的各國貨幣價格為依據每日更新2次之匯率換算的參考預估值，實際結帳金額可能依信用卡匯率與門市優惠而異。當您離開 PickKR 前往外部網站後，一切交易條件、價格異動、退換貨政策與售後服務均由該官方網站全權負責。',
         '本站整理的保養成分簡介、膚質適配提醒、機場隨身液體規範及退稅門檻資訊僅供行前規劃參考，並不構成醫療皮膚諮詢、海關或法律建議；實際購買與搭機前請務必確認商品標示與航空公司最新規定。',
         '本站部分頁面與外連按鈕未來可能配置合規推薦連結或 Google AdSense 廣告版位，惟每週榜單排序與編輯選品評論絕不接受任何商業付費干預。',
       ],

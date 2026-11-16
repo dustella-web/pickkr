@@ -3,7 +3,13 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { ChannelId } from '@/types/ranking';
 import { readChannelSnapshot } from '@/lib/storage/json-store';
-import { PUBLIC_LOCALES, getUiMessages, isPublicLocale } from '@/lib/i18n/messages';
+import { PUBLIC_LOCALES, getUiMessages, isPublicLocale, type PublicLocale } from '@/lib/i18n/messages';
+import { getExchangeRates, LOCALE_CURRENCY } from '@/lib/i18n/exchange-rates';
+import { formatByCurrency } from '@/lib/i18n/format-price';
+import {
+  computeChannelInsights,
+  INSIGHT_CATEGORY_LABELS,
+} from '@/lib/content/channel-insights';
 import { getChannelEditorial } from '@/lib/content/channel-editorial';
 import {
   getGuideBySlug,
@@ -11,9 +17,22 @@ import {
   getLocalizedCategory,
 } from '@/lib/content/guides';
 import { buildBreadcrumbJsonLd, buildPageMetadata, getSiteBaseUrl } from '@/lib/seo/metadata';
-import { PublicShell, RankingGrid } from '@/components/ranking-view';
+import { PublicShell } from '@/components/ranking-view';
+import { InteractiveRankingExplorer } from '@/components/interactive-ranking';
 
 const VALID_CHANNELS: ChannelId[] = ['lottedfs', 'missha', 'daisomall'];
+
+const INSIGHT_LABELS: Record<
+  PublicLocale,
+  { avgPrice: string; onSale: string; maxOff: string; topTrends: string }
+> = {
+  en: { avgPrice: 'Avg. Top 20 Price', onSale: 'Items on Sale', maxOff: 'Up to', topTrends: 'Leading Categories' },
+  ja: { avgPrice: 'Top 20 平均価格', onSale: 'セール対象品', maxOff: '最大', topTrends: '人気カテゴリー' },
+  'zh-CN': { avgPrice: 'Top 20 均价', onSale: '折扣商品数', maxOff: '最高', topTrends: '热门品类分布' },
+  'zh-TW': { avgPrice: 'Top 20 均價', onSale: '折扣商品數', maxOff: '最高', topTrends: '熱門品類分佈' },
+};
+
+export const revalidate = 43200; // 12 hours (2 updates per day)
 
 export function generateStaticParams() {
   return PUBLIC_LOCALES.flatMap((locale) =>
@@ -58,8 +77,14 @@ export default async function ChannelTop20Page({
   const relatedGuides = editorial.relatedGuideSlugs
     .map((slug) => getGuideBySlug(slug))
     .filter((article): article is NonNullable<typeof article> => Boolean(article));
-  const snapshot = await readChannelSnapshot('published', ch);
+  const [exchangeSnapshot, snapshot] = await Promise.all([
+    getExchangeRates(),
+    readChannelSnapshot('published', ch),
+  ]);
   const topItems = snapshot?.items.slice(0, 20) ?? [];
+  const targetCurrency = LOCALE_CURRENCY[locale];
+  const insights = computeChannelInsights(topItems, exchangeSnapshot.rates, targetCurrency);
+  const insightLabels = INSIGHT_LABELS[locale];
   const baseUrl = getSiteBaseUrl();
   const itemListJsonLd = {
     '@context': 'https://schema.org',
@@ -112,12 +137,50 @@ export default async function ChannelTop20Page({
         )}
       </div>
 
-      {snapshot && snapshot.items.length > 0 ? (
-        <section>
+      {snapshot && topItems.length > 0 ? (
+        <section className="space-y-6">
           <h2 className="sr-only">
             {t.channels[ch]} {t.weeklyTop20Badge}
           </h2>
-          <RankingGrid items={snapshot.items.slice(0, 20)} locale={locale} />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="rounded-[20px] border border-[#dee3e9] bg-white p-4">
+              <span className="text-xs font-bold text-[#5d6c7b]">{insightLabels.avgPrice}</span>
+              <p className="mt-1 text-2xl font-bold tabular-nums text-[#0a1317]">
+                {formatByCurrency(insights.averagePrice, targetCurrency)}
+              </p>
+            </div>
+            <div className="rounded-[20px] border border-[#dee3e9] bg-white p-4">
+              <span className="text-xs font-bold text-[#5d6c7b]">{insightLabels.onSale}</span>
+              <p className="mt-1 text-2xl font-bold tabular-nums text-[#0a1317]">
+                {insights.saleCount} / {insights.itemCount}
+                {insights.maxDiscountPct > 0 && (
+                  <span className="ml-2 text-xs font-bold text-[#0064e0]">
+                    ({insightLabels.maxOff} -{insights.maxDiscountPct}%)
+                  </span>
+                )}
+              </p>
+            </div>
+            <div className="rounded-[20px] border border-[#dee3e9] bg-white p-4">
+              <span className="text-xs font-bold text-[#5d6c7b]">{insightLabels.topTrends}</span>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {insights.topCategories.map((cat) => (
+                  <span
+                    key={cat.key}
+                    className="rounded-full bg-[#f1f4f7] px-2.5 py-0.5 text-xs font-bold text-[#0a1317]"
+                  >
+                    {INSIGHT_CATEGORY_LABELS[cat.key][locale]} ({cat.count})
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <InteractiveRankingExplorer
+            channel={ch}
+            items={topItems}
+            locale={locale}
+            exchangeRates={exchangeSnapshot.rates}
+            exchangeUpdatedAt={exchangeSnapshot.updatedAt}
+          />
         </section>
       ) : (
         <div className="rounded-[24px] border border-dashed border-[#ced0d4] bg-white p-12 text-center text-sm text-[#8595a4]">

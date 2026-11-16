@@ -12,7 +12,8 @@
     "start": "next start",
     "test": "vitest run",
     "test:watch": "vitest",
-    "crawl:all": "node --experimental-strip-types scripts/crawl-all.ts"
+    "crawl:all": "node --experimental-strip-types scripts/crawl-all.ts",
+    "rates:update": "node --experimental-strip-types scripts/update-exchange-rates.ts"
   },
   "keywords": [],
   "author": "",

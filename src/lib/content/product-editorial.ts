@@ -254,6 +254,141 @@ function detectChannelCue(item: RankingItem): { cue: ChannelCue; discountPct: nu
  * rank tier, and channel cues when item.editorial_summary[locale] is blank.
  * Supports a distinct 'compact' variant for homepage summaries to avoid duplication.
  */
+type IngredientFocus =
+  | 'collagen'
+  | 'cica'
+  | 'pdrn'
+  | 'retinol'
+  | 'vitamin'
+  | 'peptide'
+  | 'hyaluronic'
+  | 'ceramide'
+  | 'honey'
+  | 'rice'
+  | 'artemisia'
+  | 'teaTree';
+
+const INGREDIENT_RULES: Array<{ focus: IngredientFocus; pattern: RegExp }> = [
+  { focus: 'pdrn', pattern: /\bpdrn\b/i },
+  { focus: 'collagen', pattern: /\bcollagen\b|콜라겐/i },
+  { focus: 'cica', pattern: /\bcica\b|madecass|centella|시카|병풀|마데카/i },
+  { focus: 'retinol', pattern: /\bretinol\b|레티놀/i },
+  { focus: 'vitamin', pattern: /\bvitamin\b|vita\b|niacinamide|비타민|나이아신/i },
+  { focus: 'peptide', pattern: /\bpeptide\b|펩타이드/i },
+  { focus: 'hyaluronic', pattern: /\bhyaluron|히알루론/i },
+  { focus: 'ceramide', pattern: /\bceramide\b|barrier|세라마이드|장벽|아토베리어/i },
+  { focus: 'honey', pattern: /\bhoney\b|propolis|허니|꿀|프로폴리스/i },
+  { focus: 'rice', pattern: /\brice\b|쌀|라이스/i },
+  { focus: 'artemisia', pattern: /\bartemisia\b|mugwort|개똥쑥|쑥/i },
+  { focus: 'teaTree', pattern: /\btea\s*tree\b|티트리/i },
+];
+
+const INGREDIENT_NOTES: Record<IngredientFocus, Record<PublicLocale, string>> = {
+  pdrn: {
+    en: 'Formulated with PDRN for elasticity and post-travel skin recovery.',
+    ja: 'PDRN配合でハリと旅行後の肌コンディションケアに人気。',
+    'zh-CN': '蕴含 PDRN 修护成分，适合提升弹润度与旅后修护。',
+    'zh-TW': '蘊含 PDRN 修護成分，適合提升彈潤感與旅後修護。',
+  },
+  collagen: {
+    en: 'Collagen-focused care targeting firming and plump hydration.',
+    ja: 'コラーゲン配合でハリ・弾力ケアを重視する方に定番。',
+    'zh-CN': '主打胶原蛋白紧致保湿，提升肌肤饱满质感。',
+    'zh-TW': '主打膠原蛋白緊緻保濕，提升肌膚澎潤彈性。',
+  },
+  cica: {
+    en: 'Calming Cica formula suited for sensitive or redness-prone skin.',
+    ja: 'シカ（ツボクサ）成分でゆらぎ肌や赤みを穏やかに鎮静。',
+    'zh-CN': '积雪草舒缓配方，适合敏感泛红或换季维稳。',
+    'zh-TW': '積雪草舒緩配方，適合敏弱泛紅或換季維穩修護。',
+  },
+  retinol: {
+    en: 'Retinol night-care pick for texture smoothing and pore refinement.',
+    ja: 'レチノール配合でキメ整え・夜間の集中エイジングケア向け。',
+    'zh-CN': '含视黄醇成分，主打夜间细腻肤质与毛孔护理。',
+    'zh-TW': '含視黃醇成分，適合夜間細緻膚質與毛孔保養。',
+  },
+  vitamin: {
+    en: 'Brightening vitamin blend for dullness and uneven tone care.',
+    ja: 'ビタミン配合でくすみ・トーンアップケアに選ばれる人気品。',
+    'zh-CN': '维他命提亮配方，改善暗沉与肤色不均困扰。',
+    'zh-TW': '維他命提亮配方，有助改善暗沉與膚色不均。',
+  },
+  peptide: {
+    en: 'Peptide complex supporting firmness and fine-line care.',
+    ja: 'ペプチド複合成分でハリ不足や目元・口元ケアに好評。',
+    'zh-CN': '多重胜肽加持，兼顾紧致轮廓与抗初老需求。',
+    'zh-TW': '多重胜肽加持，兼顧緊緻輪廓與細紋撫平。',
+  },
+  hyaluronic: {
+    en: 'Multi-weight hyaluronic hydration for dehydrated skin.',
+    ja: 'ヒアルロン酸の濃密保湿でインナードライ対策に好適。',
+    'zh-CN': '玻尿酸深层补水，快速缓解干燥紧绷感。',
+    'zh-TW': '玻尿酸深層補水，快速緩解乾燥緊繃不適。',
+  },
+  ceramide: {
+    en: 'Ceramide barrier support ideal for dry climates and recovery.',
+    ja: 'セラミド配合で乾燥環境でも肌のバリア機能をしっかり保護。',
+    'zh-CN': '神经酰胺强化肌肤屏障，干燥气候下持久锁水。',
+    'zh-TW': '神經醯胺強化肌膚屏障，乾燥氣候也能長效鎖水。',
+  },
+  honey: {
+    en: 'Nourishing honey extract for overnight softness and glow.',
+    ja: 'ハチミツ由来成分でしっとりツヤ感のある仕上がりを実現。',
+    'zh-CN': '蜂蜜滋养精粹，令肌肤呈现柔润光泽感。',
+    'zh-TW': '蜂蜜滋養精粹，賦予肌膚柔嫩水亮光澤。',
+  },
+  rice: {
+    en: 'Gentle rice-derived care for soft brightening and daily polish.',
+    ja: 'お米由来成分でつるんと透明感のある肌へ導く定番ケア。',
+    'zh-CN': '大米温和精粹，日常清洁同时提亮肤色。',
+    'zh-TW': '大米溫和精粹，日常清潔同時柔嫩提亮。',
+  },
+  artemisia: {
+    en: 'Korean artemisia extract prized for soothing reactive skin.',
+    ja: '韓国産ヨモギエキスが敏感になった肌を穏やかに整えます。',
+    'zh-CN': '韩国艾草精粹舒缓修护，缓解肌肤燥热敏感。',
+    'zh-TW': '韓國艾草精粹溫和舒緩，安撫敏弱不適膚況。',
+  },
+  teaTree: {
+    en: 'Tea tree clarifying care tailored for blemish-prone routines.',
+    ja: 'ティーツリー配合で皮脂バランスや肌荒れ予防に人気。',
+    'zh-CN': '茶树净颜配方，帮助平衡油脂与痘肌护理。',
+    'zh-TW': '茶樹淨顏配方，協助平衡油脂與調理痘肌。',
+  },
+};
+
+function extractSizeToken(item: RankingItem): string | null {
+  const haystack = `${item.name.en} ${item.name.ko}`;
+  const match = haystack.match(/\b(\d+(?:\.\d+)?\s?(?:ml|g|mg|ea|sheets?|pcs|매|개))\b/i);
+  return match ? match[1].replace(/\s+/g, '') : null;
+}
+
+function detectIngredientFocus(item: RankingItem): IngredientFocus | null {
+  const haystack = `${item.name.en} ${item.name.ko}`;
+  for (const rule of INGREDIENT_RULES) {
+    if (rule.pattern.test(haystack)) {
+      return rule.focus;
+    }
+  }
+  return null;
+}
+
+function formatSizeBadge(sizeToken: string | null, locale: PublicLocale): string {
+  if (!sizeToken) return '';
+  switch (locale) {
+    case 'ja':
+      return `（${sizeToken}仕様）`;
+    case 'zh-CN':
+      return `（${sizeToken} 规格）`;
+    case 'zh-TW':
+      return `（${sizeToken} 規格）`;
+    case 'en':
+    default:
+      return ` (${sizeToken} size)`;
+  }
+}
+
 export function getProductEditorialNote(
   item: RankingItem,
   locale: PublicLocale,
@@ -270,6 +405,9 @@ export function getProductEditorialNote(
   }
 
   const { cue, discountPct } = detectChannelCue(item);
+  const ingredient = detectIngredientFocus(item);
+  const sizeBadge = formatSizeBadge(extractSizeToken(item), locale);
+  const focusNote = ingredient ? INGREDIENT_NOTES[ingredient][locale] : KIND_NOTES[kind][locale];
 
-  return `${formatRankAndBrandLead(item, locale)} ${KIND_NOTES[kind][locale]} ${getChannelCueNote(cue, locale, discountPct)}`;
+  return `${formatRankAndBrandLead(item, locale)}${sizeBadge} ${focusNote} ${getChannelCueNote(cue, locale, discountPct)}`;
 }

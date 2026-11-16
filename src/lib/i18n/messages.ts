@@ -32,6 +32,7 @@ export interface UiMessages {
   weeklyTop20Badge: string;
   editorialGuidesBadge: string;
   legalContactHeading: string;
+  exchangeRateNotice: string;
   channels: Record<ChannelId, string>;
 }
 
@@ -52,6 +53,7 @@ const MESSAGES: Record<Locale, UiMessages> = {
     weeklyTop20Badge: '주간 Top 20',
     editorialGuidesBadge: '에디토리얼 가이드',
     legalContactHeading: '정책 및 문의',
+    exchangeRateNotice: 'KRW/USD 기준 참고 환산 가격(1일 2회 업데이트)이며, 실제 결제 금액과 다를 수 있습니다.',
     channels: {
       lottedfs: '롯데면세점 뷰티',
       missha: '미샤 (MISSHA)',
@@ -74,6 +76,7 @@ const MESSAGES: Record<Locale, UiMessages> = {
     weeklyTop20Badge: 'Weekly Top 20',
     editorialGuidesBadge: 'Editorial Guides',
     legalContactHeading: 'Legal & Contact',
+    exchangeRateNotice: 'Estimated prices converted from KRW/USD (updated twice daily). Actual checkout totals may vary.',
     channels: {
       lottedfs: 'Lotte Duty Free Beauty',
       missha: 'MISSHA',
@@ -96,6 +99,7 @@ const MESSAGES: Record<Locale, UiMessages> = {
     weeklyTop20Badge: '週間 Top 20',
     editorialGuidesBadge: 'ショッピングガイド',
     legalContactHeading: '規約・お問い合わせ',
+    exchangeRateNotice: 'KRW/USD基準の参考換算価格（1日2回更新）です。実際の決済金額と異なる場合があります。',
     channels: {
       lottedfs: 'ロッテ免税店 ビューティー',
       missha: 'ミシャ (MISSHA)',
@@ -118,6 +122,7 @@ const MESSAGES: Record<Locale, UiMessages> = {
     weeklyTop20Badge: '每周 Top 20',
     editorialGuidesBadge: '购物攻略专栏',
     legalContactHeading: '条款与联系',
+    exchangeRateNotice: '按 KRW/USD 汇率换算的参考价格（每日更新2次），实际结算金额可能有所差异。',
     channels: {
       lottedfs: '乐天免税店 美妆',
       missha: '谜尚 MISSHA',
@@ -140,6 +145,7 @@ const MESSAGES: Record<Locale, UiMessages> = {
     weeklyTop20Badge: '每週 Top 20',
     editorialGuidesBadge: '購物攻略專欄',
     legalContactHeading: '條款與聯絡',
+    exchangeRateNotice: '依 KRW/USD 匯率換算的參考價格（每日更新2次），實際結帳金額可能有所差異。',
     channels: {
       lottedfs: '樂天免稅店 美妝',
       missha: 'MISSHA 謎尚',
